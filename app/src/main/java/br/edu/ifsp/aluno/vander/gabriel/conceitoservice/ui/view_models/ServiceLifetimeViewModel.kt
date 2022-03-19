@@ -4,12 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class ServiceLifetimeViewModel: ViewModel() {
+class ServiceLifetimeViewModel : ViewModel() {
     private val _lifetime = MutableLiveData(0)
     val lifetime: LiveData<Int> = _lifetime
 
     fun onLifetimeValueChanged(newValue: Int) {
-        _lifetime.value = newValue
+        _lifetime.postValue(newValue)
     }
 
 }

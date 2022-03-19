@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConceitoService">
         <service
+            android:name=".services.LifetimeBoundService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
             android:name=".services.LifetimeStartedService"
             android:enabled="true"
             android:exported="false" />
